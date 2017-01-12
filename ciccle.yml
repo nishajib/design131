@@ -1,0 +1,5 @@
+deployment:
+  prod:
+    branch: master
+    commands:
+      - aws s3 sync *.gz s3://circleci-upload/ --delete
