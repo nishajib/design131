@@ -2,4 +2,4 @@ deployment:
   prod:
     branch: master
     commands:
-      - aws s3 sync *.gz s3://circleci-upload/ --delete --profile circleci
+      - aws s3 cp --recursive  target s3://circleci-upload/ --delete --profile circleci
